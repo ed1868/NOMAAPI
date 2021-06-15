@@ -1,7 +1,7 @@
 const path = require('path')
 require('dotenv').config({ path: path.join(__dirname, '.env') })
 
-const bodyParser = require('body-parser')
+
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const express = require('express')
@@ -41,9 +41,13 @@ app.use((req, res, next) => {
 
 
 app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json())
 app.use(cookieParser())
+
+
 
 // Set the public folder to "~/client/build/"
 // Example: http://localhost:5000/favicon.ico => Display "~/client/build/favicon.ico"
