@@ -73,19 +73,20 @@ app.use('/api/contact', require('./routes/contact'));
 app.use('/api/tokenWaitList', require('./routes/tokenWishList'));
 
 // For any routes that starts with "/api", catch 404 and forward to error handler
-// app.use('/api/*', (req, res, next) => {
-//   let err = new Error('Not Found')
-//   err.status = 404
-//   next(err)
-// })
-
-// For any other routes, redirect to the index.html file of React
-app.get('*', (req, res) => {
+app.use('/api/*', (req, res, next) => {
   res.json({
     secret: 42,
     user: "YA Girl",
   })
 })
+
+// For any other routes, redirect to the index.html file of React
+// app.get('*', (req, res) => {
+//   res.json({
+//     secret: 42,
+//     user: "YA Girl",
+//   })
+// })
 
 // Error handler
 app.use((err, req, res, next) => {
