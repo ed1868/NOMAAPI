@@ -48,6 +48,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 
+// Before build
 
 // Set the public folder to "~/client/build/"
 // Example: http://localhost:5000/favicon.ico => Display "~/client/build/favicon.ico"

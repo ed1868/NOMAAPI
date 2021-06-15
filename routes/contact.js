@@ -10,7 +10,7 @@ const bcryptSalt = 10
 
 const nodemailer = require("nodemailer");
 
-
+let hope = "the hope is near, just look within and you'll see it never left";
 
 
 const transporter = nodemailer.createTransport({
