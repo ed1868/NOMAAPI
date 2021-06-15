@@ -9,7 +9,7 @@ const bcryptSalt = 10
 
 const nodemailer = require("nodemailer");
 
-
+let hope = "the hope is near, just look within and you'll see it never left";
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -24,7 +24,7 @@ let emailAdmin = (emailData) => {
   let email = emailData.email;
 
   let firstName = emailData.firstName;
-  
+
 
   console.log("EMAILLL ADMIN : ", email);
 
@@ -682,7 +682,7 @@ let emailSender = (emailData) => {
 
 
 
-    emailAdmin(emailData);
+  emailAdmin(emailData);
 }
 
 //GET ROUTE TO GET ALL EMAILS FROM TOKEN WISHLIST 
